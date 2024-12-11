@@ -3,8 +3,11 @@ import Link from 'next/link'
 import Hero from '@/components/Hero'
 import InfoBoxes from '@/components/InfoBoxes'
 import HomeProperties from '@/components/HomeProperties'
-const HomePage = () => {
-  console.log(process.env.MONGODB_URI)
+import connectDB from '@/config/database'
+
+const HomePage = async () => {
+  
+  await connectDB();
 
   return (
     <>
